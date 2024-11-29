@@ -4,9 +4,6 @@ function Header() {
   return (
     <>
       <div className="container">
-        <div className="header-content">
-          <img src="/src/assets/images/icons/hp-icon.png" alt="hp-icon" />
-        </div>
         <div className="header-nav roboto-thin">
           <a href="#">Home</a>
           <a href="#">About</a>
