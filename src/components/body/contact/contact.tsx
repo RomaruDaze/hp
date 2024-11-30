@@ -35,12 +35,12 @@ function Contact() {
       <h2>Contact</h2>
       <div className="contact-content">
         <div className="contact-links">
-          <a href="mailto:your-email@example.com">
+          <a href="mailto:romarudazee99@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
 
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/RomaruDaze"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -48,7 +48,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://instagram.com/your-instagram-username"
+            href="https://instagram.com/romaru._"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,7 +56,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://twitter.com/your-twitter-username"
+            href="https://x.com/RomaruDaze"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -64,7 +64,7 @@ function Contact() {
           </a>
 
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://linkedin.com/in/roger-marvin-78659b302/"
             target="_blank"
             rel="noopener noreferrer"
           >
