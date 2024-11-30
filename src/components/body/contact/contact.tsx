@@ -1,10 +1,37 @@
 import "./contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
+
 function Contact() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const middleOfScreen = window.innerHeight / 2;
+      const contactPosition = document
+        .querySelector(".contact-container")
+        ?.getBoundingClientRect().top;
+
+      if (contactPosition && contactPosition < middleOfScreen) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="contact-container">
+    <div className={`contact-container ${isVisible ? "visible" : ""}`}>
       <h2>Contact</h2>
       <div className="contact-content">
         <div className="contact-links">

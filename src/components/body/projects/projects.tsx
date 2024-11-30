@@ -6,6 +6,7 @@ import DokoTabe from "../../../assets/images/pictures/dokotabe-banner.png";
 
 function Projects() {
   const [isVisible, setIsVisible] = useState({
+    heading: false,
     card1: false,
     card2: false,
     card3: false,
@@ -20,7 +21,12 @@ function Projects() {
 
         if (rect.top < windowHeight && rect.bottom > 0) {
           if (rect.top < windowHeight / 1.5) {
-            setIsVisible({ card1: true, card2: true, card3: true });
+            setIsVisible({
+              heading: true,
+              card1: true,
+              card2: true,
+              card3: true,
+            });
           } else if (rect.top < windowHeight / 1.5) {
             setIsVisible((prev) => ({ ...prev, card1: true }));
           }
@@ -34,7 +40,16 @@ function Projects() {
 
   return (
     <div className="projects-container" ref={projectsRef}>
-      <h2>Projects</h2>
+      <h2
+        className={`projects-heading ${isVisible.heading ? "visible" : ""}`}
+        style={{
+          opacity: isVisible.heading ? 1 : 0,
+          transition: "opacity 0.5s ease",
+          transitionDelay: "0.1s",
+        }}
+      >
+        Projects
+      </h2>
       <div className="projects-grid">
         <div
           className={`project-card ${isVisible.card1 ? "visible" : ""}`}
