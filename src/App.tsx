@@ -3,6 +3,7 @@ import "./App.css";
 import "./assets/fonts/font-roboto.css";
 import Header from "./components/header/header";
 import Body from "./components/body/body";
+import Footer from "./components/footer/footer";
 function App() {
   const [headerBgColor, setHeaderBgColor] = useState("#000");
 
@@ -25,13 +26,16 @@ function App() {
   return (
     <>
       <div
-        className="header-container"
+        className="app-header-container"
         style={{ backgroundColor: headerBgColor }}
       >
         <Header />
       </div>
-      <div className="main-container">
+      <div className="app-body-container">
         <Body />
+      </div>
+      <div className="app-footer-container">
+        <Footer />
       </div>
     </>
   );

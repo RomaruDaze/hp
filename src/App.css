@@ -1,4 +1,4 @@
-.header-container {
+.app-header-container {
     width: 100%;
     background-color: var(--primary-color);
     transition: background-color 0.3s ease;
@@ -7,8 +7,16 @@
     z-index: 100;
 }
 
-.main-container {
+.app-body-container {
     width: 100%;
     background-color: #ffd700;
     height: 50vh;
+}
+
+.app-footer-container {
+    width: 100%;
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
 }

@@ -3,7 +3,7 @@ import "./header.css";
 function Header() {
   return (
     <>
-      <div className="container">
+      <div className="header-container">
         <div className="header-nav roboto-thin">
           <a href="#">Home</a>
           <a href="#">Resume</a>
