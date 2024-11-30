@@ -40,7 +40,7 @@
 }
 
 .header-search-input::placeholder {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 .header-search-input:focus {

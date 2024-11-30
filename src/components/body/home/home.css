@@ -1,4 +1,62 @@
 .home-container {
+    font-family: "Tektur", sans-serif;
     background-color: var(--secondary-color);
-    height: 50vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-container h1 {
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+.title-container span {
+    font-size: 10rem;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25%;
+}
+
+.content-container p {
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.content-container button {
+    background-color: var(--secondary-color);
+    background-size: 200% 100%;
+    transition: color 0.3s ease;
+    color: var(--primary-color);
+    width: 60%;
+    padding: 5px 10px;
+    border: 2px solid var(--primary-color);
+    font-size: 1.8rem;
+    align-self: center;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.content-container button:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    animation: slide 0.5s forwards;
+}
+
+.content-container button img {
+    width: 60px;
+    height: 60px;
+
 }

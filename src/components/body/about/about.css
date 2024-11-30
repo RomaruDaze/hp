@@ -1,4 +1,61 @@
 .about-container {
+    font-family: "Tektur", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--tertiary-color);
-    height: 50vh;
+    height: 70vh;
+    padding: 0 20%;
+}
+
+.about-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-picture img {
+    width: 500px;
+    height: 500px;
+}
+
+.about-content {
+    color: var(--primary-color);
+    text-align: justify;
+}
+
+.about-content h1 {
+    font-size: 5rem;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+}
+
+.about-content p span {
+    font-weight: bold;
+}
+
+.about-content p span a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.about-content button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.about-content button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    animation: slide 0.5s forwards;
 }
