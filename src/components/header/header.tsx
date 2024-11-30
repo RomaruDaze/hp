@@ -6,7 +6,8 @@ function Header() {
       <div className="container">
         <div className="header-nav roboto-thin">
           <a href="#">Home</a>
-          <a href="#">About</a>
+          <a href="#">Resume</a>
+          <a href="#">News</a>
           <a href="#">Contact</a>
         </div>
         <form className="header-search" role="search">

@@ -1,7 +1,7 @@
 .home-container {
     font-family: "Tektur", sans-serif;
     background-color: var(--secondary-color);
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .title-container h1 {
@@ -28,6 +29,8 @@
     justify-content: center;
     align-items: center;
     margin: 0 25%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .content-container p {
@@ -59,4 +62,14 @@
     width: 60px;
     height: 60px;
 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
