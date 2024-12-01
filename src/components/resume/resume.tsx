@@ -60,7 +60,7 @@ function Resume() {
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <span>Roger Marvin</span>
+              <span>RogerMarvin</span>
             </div>
 
             <div id="github" className="social-btn flex-center">

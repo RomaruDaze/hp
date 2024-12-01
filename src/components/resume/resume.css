@@ -93,7 +93,7 @@
 }
 
 .social-btn:hover {
-    width: 150px;
+    width: 200px;
     border-radius: 5px;
     background: var(--primary-color);
 }
@@ -104,7 +104,7 @@
 
 .social-btn:hover span {
     padding: 2px;
-    width: 80px;
+    width: 120px;
     color: var(--secondary-color);
 }
 
