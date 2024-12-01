@@ -1,0 +1,28 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.footer-container p {
+    color: var(--tertiary-color);
+}
+
+.footer-social-media {
+    position: absolute;
+    left: 0;
+    display: flex;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.footer-social-media a {
+    color: var(--tertiary-color);
+    font-size: 1.5rem;
+}
+
+.footer-social-media a:hover {
+    color: var(--secondary-color);
+}

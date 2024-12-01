@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./projects.css";
-import TDL from "../../../../assets/images/pictures/tdl-banner.png";
-import SeleniumType from "../../../../assets/images/pictures/seltype-banner.png";
-import DokoTabe from "../../../../assets/images/pictures/dokotabe-banner.png";
+import TDL from "../../../assets/images/pictures/tdl-banner.png";
+import SeleniumType from "../../../assets/images/pictures/seltype-banner.png";
+import DokoTabe from "../../../assets/images/pictures/dokotabe-banner.png";
 
 function Projects() {
   const [isVisible, setIsVisible] = useState({
