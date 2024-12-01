@@ -5,13 +5,37 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useRef } from "react";
 
 function Resume() {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const timelineItemsRef = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('rise-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    if (headerRef.current) observer.observe(headerRef.current);
+
+    timelineItemsRef.current.forEach((item) => {
+      if (item) observer.observe(item);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="resume-container">
-      <div className="resume-header">
+      <div className="resume-header" ref={headerRef}>
         <div className="resume-about-picture">
           <img src={profilePicture} alt="about" />
         </div>
@@ -43,9 +67,6 @@ function Resume() {
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://x.com/RomaruDaze" target="_blank">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
             <a href="https://instagram.com/romaru._" target="_blank">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
@@ -63,7 +84,7 @@ function Resume() {
               <div className="timeline-circle-today"> </div>
               <div className="timeline-content-today"> </div>
             </div>
-            <div className="timeline-item">
+            <div className="timeline-item" ref={(el) => (timelineItemsRef.current[0] = el!)}>
               <div className="timeline-date">April 2022</div>
               <div className="timeline-circle"> </div>
               <div className="timeline-content">
@@ -77,7 +98,7 @@ function Resume() {
                 <p>Information Faculty</p>
               </div>
             </div>
-            <div className="timeline-item">
+            <div className="timeline-item" ref={(el) => (timelineItemsRef.current[1] = el!)}>
               <div className="timeline-date">October 2020</div>
               <div className="timeline-circle"> </div>
               <div className="timeline-content">
@@ -94,7 +115,7 @@ function Resume() {
                 <p>Japanese Language</p>
               </div>
             </div>
-            <div className="timeline-item">
+            <div className="timeline-item" ref={(el) => (timelineItemsRef.current[2] = el!)}>
               <div className="timeline-date">July 2017</div>
               <div className="timeline-circle"> </div>
               <div className="timeline-content">
@@ -111,7 +132,7 @@ function Resume() {
                 <p>High School</p>
               </div>
             </div>
-            <div className="timeline-item">
+            <div className="timeline-item" ref={(el) => (timelineItemsRef.current[3] = el!)}>
               <div className="timeline-date">July 2014</div>
               <div className="timeline-circle"> </div>
               <div className="timeline-content">
@@ -128,7 +149,7 @@ function Resume() {
                 <p>Middle School</p>
               </div>
             </div>
-            <div className="timeline-item">
+            <div className="timeline-item" ref={(el) => (timelineItemsRef.current[4] = el!)}>
               <div className="timeline-date">July 2008</div>
               <div className="timeline-circle"> </div>
               <div className="timeline-content">

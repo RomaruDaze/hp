@@ -5,7 +5,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 
@@ -36,7 +36,13 @@ function Contact() {
           <a href="mailto:romarudazee99@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
-
+          <a
+            href="https://linkedin.com/in/roger-marvin-78659b302/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+          </a>
           <a
             href="https://github.com/RomaruDaze"
             target="_blank"
@@ -58,15 +64,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} /> Twitter
-          </a>
-
-          <a
-            href="https://linkedin.com/in/roger-marvin-78659b302/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            <FontAwesomeIcon icon={faXTwitter} /> Twitter
           </a>
         </div>
         <div className="contact-form">

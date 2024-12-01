@@ -4,7 +4,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
@@ -24,7 +24,7 @@ function Footer() {
           <FontAwesomeIcon icon={faInstagram} />
         </a>
         <a href="https://x.com/RomaruDaze" target="_blank">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faXTwitter} />
         </a>
       </div>
       <p>Copyright © 2024 Roger Marvin</p>
