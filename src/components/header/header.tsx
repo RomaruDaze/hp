@@ -11,10 +11,7 @@ function Header({
   ) => {
     event.preventDefault();
     setCurrentView(view);
-    const target = document.getElementById(view);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

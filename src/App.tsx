@@ -12,6 +12,11 @@ function App() {
     return localStorage.getItem("currentView") || "body";
   });
 
+  const handleSetCurrentView = (view: string) => {
+    setCurrentView(view);
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -33,7 +38,7 @@ function App() {
   }, [currentView]);
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page on load
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -42,10 +47,14 @@ function App() {
         className="app-header-container"
         style={{ backgroundColor: headerBgColor }}
       >
-        <Header setCurrentView={setCurrentView} />
+        <Header setCurrentView={handleSetCurrentView} />
       </div>
       <div className="app-body-container" id="body">
-        {currentView === "body" ? <Body /> : <Resume />}
+        {currentView === "body" ? (
+          <Body setCurrentView={handleSetCurrentView} />
+        ) : (
+          <Resume />
+        )}
       </div>
       <div className="app-footer-container" id="footer">
         <Footer />

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./about.css";
 import profilePicture from "../../../assets/images/pictures/profile-picture.png";
 
-function About() {
+function About({ setCurrentView }: { setCurrentView: (view: string) => void }) {
   const [isVisible, setIsVisible] = useState({
     picture: false,
     content: false,
@@ -68,7 +68,7 @@ function About() {
           </span>{" "}
           a better country.
         </p>
-        <button>My Resume</button>
+        <button onClick={() => setCurrentView("resume")}>My Resume</button>
       </div>
     </div>
   );
