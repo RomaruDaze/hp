@@ -71,6 +71,10 @@ textarea {
     outline: none;
 }
 
+.contact-form-container textarea {
+    height: 120px;
+}
+
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
     border: 2px solid var(--secondary-color);

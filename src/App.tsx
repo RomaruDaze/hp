@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import "./assets/fonts/font-roboto.css";
-import Header from "./components/header/header";
-import Body from "./components/body/body";
-import Footer from "./components/footer/footer";
+import Header from "./components/home/header/header";
+import Body from "./components/home/body/body";
+import Footer from "./components/home/footer/footer";
 function App() {
   const [headerBgColor, setHeaderBgColor] = useState("#000");
 

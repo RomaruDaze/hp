@@ -21,8 +21,6 @@ function Contact() {
 
       if (contactPosition && contactPosition < middleOfScreen) {
         setIsVisible(true);
-      } else {
-        setIsVisible(false);
       }
     };
 

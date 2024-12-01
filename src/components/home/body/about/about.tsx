@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./about.css";
-import profilePicture from "../../../assets/images/pictures/profile-picture.png";
+import profilePicture from "../../../../assets/images/pictures/profile-picture.png";
 
 function About() {
   const [isVisible, setIsVisible] = useState({
