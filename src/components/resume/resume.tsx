@@ -6,9 +6,10 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef } from "react";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb} from "@fortawesome/free-solid-svg-icons";
 
 function Resume() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -68,6 +69,9 @@ function Resume() {
             </a>
             <a href="https://instagram.com/romaru._" target="_blank">
               <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://x.com/romaruDaze" target="_blank">
+              <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </div>
         </div>

@@ -51,72 +51,90 @@ function Projects() {
         Projects
       </h2>
       <div className="projects-grid">
-        <div
-          className={`project-card ${isVisible.card1 ? "visible" : ""}`}
-          style={{
-            opacity: isVisible.card1 ? 1 : 0,
-            transition: "opacity 0.5s ease, transform 0.5s ease",
-            transitionDelay: "0.1s",
-          }}
-        >
-          <img
-            src={SeleniumType}
-            alt="SeleniumType"
-            className="project-image"
-          />
-          <div className="project-card-content">
-            <h3>SeleniumType</h3>
-            <p>
-              This project automates the process of logging into Monkeytype and
-              simulates typing on the website using Selenium.
-            </p>
+        <div className={`project-card ${isVisible.card1 ? "rise-up" : ""}`}>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <img
+                  src={SeleniumType}
+                  alt="SeleniumType"
+                  className="project-image"
+                />
+              </div>
+              <div className="flip-card-back">
+                <h3 className="title">SeleniumType</h3>
+                <p>
+                  This project automates the process of logging into Monkeytype
+                  and simulates typing on the website using Selenium.
+                </p>
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/RomaruDaze/SeleniumType",
+                      "_blank"
+                    )
+                  }
+                  className="button type1"
+                >
+                  More
+                </button>
+              </div>
+            </div>
           </div>
-          <button>
-            <a href="https://github.com/RomaruDaze/SeleniumType">More</a>
-          </button>
         </div>
-        <div
-          className={`project-card ${isVisible.card2 ? "visible" : ""}`}
-          style={{
-            opacity: isVisible.card2 ? 1 : 0,
-            transition: "opacity 0.5s ease, transform 0.5s ease",
-            transitionDelay: "0.2s",
-          }}
-        >
-          <img src={TDL} alt="TDL" className="project-image" />
-          <div className="project-card-content">
-            <h3>TDL</h3>
-            <p>
-              A simple and intuitive Todo List application built with Flutter.
-              This app allows users to efficiently manage their tasks, helping
-              you stay organized and productive.
-            </p>
+        <div className={`project-card ${isVisible.card2 ? "rise-up" : ""}`}>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <img src={TDL} alt="TDL" className="project-image" />
+              </div>
+              <div className="flip-card-back">
+                <h3 className="title">TDL</h3>
+                <p>
+                  A simple and intuitive Todo List application built with
+                  Flutter. This app allows users to efficiently manage their
+                  tasks, helping you stay organized and productive.
+                </p>
+                <button
+                  onClick={() =>
+                    window.open("https://github.com/RomaruDaze/TDL", "_blank")
+                  }
+                  className="button type1"
+                >
+                  More
+                </button>
+              </div>
+            </div>
           </div>
-          <button>
-            <a href="https://github.com/RomaruDaze/TDL">More</a>
-          </button>
         </div>
-        <div
-          className={`project-card ${isVisible.card3 ? "visible" : ""}`}
-          style={{
-            opacity: isVisible.card3 ? 1 : 0,
-            transition: "opacity 0.5s ease, transform 0.5s ease",
-            transitionDelay: "0.3s",
-          }}
-        >
-          <img src={DokoTabe} alt="DokoTabe" className="project-image" />
-          <div className="project-card-content">
-            <h3>DokoTabe</h3>
-            <p>
-              Dokotabe displays nearby restaurants on a map and shows the menu
-              of the selected restaurant. It also has the ability to narrow down
-              your search by distance and category, and to add restaurants to
-              your favorites.
-            </p>
+        <div className={`project-card ${isVisible.card3 ? "rise-up" : ""}`}>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <img src={DokoTabe} alt="DokoTabe" className="project-image" />
+              </div>
+              <div className="flip-card-back">
+                <h3 className="title">DokoTabe</h3>
+                <p>
+                  Dokotabe displays nearby restaurants on a map and shows the
+                  menu of the selected restaurant. It also has the ability to
+                  narrow down your search by distance and category, and to add
+                  restaurants to your favorites.
+                </p>
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/RomaruDaze/Hackathon-DokoTabe",
+                      "_blank"
+                    )
+                  }
+                  className="button type1"
+                >
+                  More
+                </button>
+              </div>
+            </div>
           </div>
-          <button>
-            <a href="https://github.com/RomaruDaze/Hackathon-DokoTabe">More</a>
-          </button>
         </div>
       </div>
     </div>

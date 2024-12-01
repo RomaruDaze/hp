@@ -68,7 +68,9 @@ function About({ setCurrentView }: { setCurrentView: (view: string) => void }) {
           </span>{" "}
           a better country.
         </p>
-        <button onClick={() => setCurrentView("resume")}>My Resume</button>
+        <button className="ui-btn" onClick={() => setCurrentView("resume")}>
+          <span>My Resume</span>
+        </button>
       </div>
     </div>
   );

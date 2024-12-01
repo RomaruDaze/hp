@@ -11,10 +11,10 @@
 
 .timeline-date-today {
     position: absolute;
-    top: 10px;
-    left: -175px;
+    top: 12px;
+    left: -150px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .timeline-circle-today {
@@ -36,9 +36,10 @@
 
 .timeline-date {
     position: absolute;
-    left: -175px;
+    left: -150px;
+    top: 5px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .timeline-circle {
@@ -58,13 +59,14 @@
 
 .timeline-content h3 {
     margin: 0;
+    font-size: 1.3rem;
 }
 
 .timeline-content h3 a {
     color: var(--primary-color);
     text-decoration: none;
     background-color: var(--secondary-color);
-    padding: 5px;
+    padding: 3px 10px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
