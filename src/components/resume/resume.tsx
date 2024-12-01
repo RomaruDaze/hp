@@ -9,7 +9,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef } from "react";
-import { faLightbulb} from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 function Resume() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -43,36 +43,44 @@ function Resume() {
           <h1>Roger Marvin</h1>
           <h2>Software Engineer</h2>
           <p>
-            I am a software engineer with a passion for creating innovative
-            solutions for{" "}
-            <span>
-              <a href="https://en.wikipedia.org/wiki/Digital_transformation">
-                Digital Transformation
-              </a>
-            </span>
-            . I have a strong foundation in computer science and a passion for
-            learning new technologies. My goal is to make{" "}
-            <span>
-              <a href="https://en.wikipedia.org/wiki/Indonesia">Indonesia</a>
-            </span>{" "}
-            a better country.
+            Hi, I'm Roger Marvin, a 22-year-old software engineer from{" "}
+            <span>Indonesia</span> currently studying abroad in{" "}
+            <span>Japan</span>. I have a passion for coding and aim to
+            contribute to the development of Indonesia's tech landscape. My
+            skill set includes <span>React</span>, <span>Flutter</span>, and{" "}
+            <span>Python</span>, which I leverage to create innovative solutions
+            and applications. I'm excited to connect with like-minded
+            individuals and explore opportunities in the tech industry.
           </p>
-          <div className="resume-link-button">
-            <a href="https://github.com/RomaruDaze" target="_blank">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a
-              href="https://linkedin.com/in/roger-marvin-78659b302/"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href="https://instagram.com/romaru._" target="_blank">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="https://x.com/romaruDaze" target="_blank">
-              <FontAwesomeIcon icon={faXTwitter} />
-            </a>
+          <div className="social-links">
+            <div id="linkedin" className="social-btn flex-center">
+              <a
+                href="https://linkedin.com/in/roger-marvin-78659b302/"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <span>LinkedIn</span>
+            </div>
+
+            <div id="github" className="social-btn flex-center">
+              <a href="https://github.com/RomaruDaze" target="_blank">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <span>Github</span>
+            </div>
+            <div id="twitter" className="social-btn flex-center">
+              <a href="https://instagram.com/romaru._" target="_blank">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <span>@example</span>
+            </div>
+            <div id="twitter" className="social-btn flex-center">
+              <a href="https://x.com/romaruDaze" target="_blank">
+                <FontAwesomeIcon icon={faXTwitter} />
+              </a>
+              <span>@example</span>
+            </div>
           </div>
         </div>
       </div>
