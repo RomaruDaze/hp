@@ -60,26 +60,26 @@ function Resume() {
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <span>LinkedIn</span>
+              <span>Roger Marvin</span>
             </div>
 
             <div id="github" className="social-btn flex-center">
               <a href="https://github.com/RomaruDaze" target="_blank">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <span>Github</span>
+              <span>RomaruDaze</span>
             </div>
             <div id="twitter" className="social-btn flex-center">
               <a href="https://instagram.com/romaru._" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <span>@example</span>
+              <span>@romaru._</span>
             </div>
             <div id="twitter" className="social-btn flex-center">
-              <a href="https://x.com/romaruDaze" target="_blank">
+              <a href="https://x.com/RomaruDaze" target="_blank">
                 <FontAwesomeIcon icon={faXTwitter} />
               </a>
-              <span>@example</span>
+              <span>@RomaruDaze</span>
             </div>
           </div>
         </div>
