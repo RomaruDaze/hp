@@ -27,7 +27,7 @@ function Header({
           <a href="#" onClick={(e) => handleLinkClick(e, "projects")}>
             Projects
           </a>
-          <a href="#" onClick={(e) => handleLinkClick(e, "contact")}>
+          <a href="#" onClick={(e) => handleLinkClick(e, "contacts")}>
             Contact
           </a>
         </div>

@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import Body from "./components/home/body";
 import Resume from "./components/resume/resume";
 import Projects from "./components/projects/projects";
+import Contacts from "./components/contacts/contacts";
 import Footer from "./components/footer/footer";
 
 function App() {
@@ -57,7 +58,9 @@ function App() {
           <Resume />
         ) : currentView === "projects" ? (
           <Projects />
-        ) : null}
+        ) : (
+          <Contacts />
+        )}
       </div>
       <div className="app-footer-container" id="footer">
         <Footer />

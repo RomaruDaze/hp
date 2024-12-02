@@ -1,0 +1,158 @@
+.contacts-container {
+    height: 100vh;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Tektur", cursive;
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 15%;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    font-size: 1.2rem;
+    width: 30%;
+}
+
+.contact-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.contact-links a:hover {
+    color: var(--secondary-color);
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 30px;
+    background-color: #07182E;
+    padding: 30px;
+    border-left: 5px solid var(--secondary-color);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.heading {
+    display: block;
+    color: var(--tertiary-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.form-container .form .input {
+    color: var(--tertiary-color);
+    width: 100%;
+    background-color: #002733;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+}
+
+.form-container .form .input:focus {
+    border-left: 5px solid var(--secondary-color);
+}
+
+.form-container .form .textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #002733;
+    color: var(--tertiary-color);
+    resize: none;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border-left: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .textarea:focus {
+    border-left: 5px solid var(--secondary-color);
+}
+
+.form-container .form .button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.form-container .form .button-container .send-button {
+    flex-basis: 70%;
+    background: var(--secondary-color);
+    padding: 10px;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .send-button:hover {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.form-container .form .button-container .reset-button-container {
+    filter: drop-shadow(1px 1px 0px var(--secondary-color));
+    flex-basis: 30%;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    background: var(--primary-color);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.rise {
+    animation: rise 0.5s ease forwards;
+}
+
+.rise-delay {
+    animation-delay: 0.2s;
+    /* Adjust delay for staggered effect */
+}

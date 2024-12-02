@@ -8,7 +8,7 @@ import DokoTabe from "../../assets/images/pictures/dokotabe-banner.png";
 import APReader from "../../assets/images/pictures/apreader-banner.png";
 
 interface LanguageData {
-  [key: string]: number; // Each key is a language name, and the value is the number of bytes
+  [key: string]: number; 
 }
 
 interface Language {
