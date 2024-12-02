@@ -11,14 +11,14 @@ function Footer() {
   return (
     <div className="footer-container roboto-thin">
       <div className="footer-social-media">
-        <a href="https://github.com/RomaruDaze" target="_blank">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
         <a
           href="https://linkedin.com/in/roger-marvin-78659b302/"
           target="_blank"
         >
           <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a href="https://github.com/RomaruDaze" target="_blank">
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         <a href="https://instagram.com/romaru._" target="_blank">
           <FontAwesomeIcon icon={faInstagram} />

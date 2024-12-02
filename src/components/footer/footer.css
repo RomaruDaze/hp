@@ -9,6 +9,7 @@
 .footer-container p {
     color: var(--tertiary-color);
     font-size: 10pt;
+    padding-top: 10px;
 }
 
 .footer-social-media {
