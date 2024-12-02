@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0px 10px;
 }
 
 .header-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .header-nav a {
@@ -46,7 +48,6 @@
     outline: none;
     border: 1px solid var(--secondary-color);
 }
-
 
 .header-search-button {
     background-color: #00000000;

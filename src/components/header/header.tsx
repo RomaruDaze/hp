@@ -24,8 +24,8 @@ function Header({
           <a href="#" onClick={(e) => handleLinkClick(e, "resume")}>
             Resume
           </a>
-          <a href="#" onClick={(e) => handleLinkClick(e, "news")}>
-            News
+          <a href="#" onClick={(e) => handleLinkClick(e, "projects")}>
+            Projects
           </a>
           <a href="#" onClick={(e) => handleLinkClick(e, "contact")}>
             Contact
