@@ -8,7 +8,7 @@ function Body({ setCurrentView }: { setCurrentView: (view: string) => void }) {
     <>
       <Home />
       <About setCurrentView={setCurrentView} />
-      <Projects />
+      <Projects setCurrentView={setCurrentView} />
       <Contact />
     </>
   );

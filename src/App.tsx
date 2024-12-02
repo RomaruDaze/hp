@@ -55,9 +55,9 @@ function App() {
           <Body setCurrentView={handleSetCurrentView} />
         ) : currentView === "resume" ? (
           <Resume />
-        ) : (
+        ) : currentView === "projects" ? (
           <Projects />
-        )}
+        ) : null}
       </div>
       <div className="app-footer-container" id="footer">
         <Footer />

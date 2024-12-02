@@ -4,7 +4,11 @@ import TDL from "../../../assets/images/pictures/tdl-banner.png";
 import SeleniumType from "../../../assets/images/pictures/seltype-banner.png";
 import DokoTabe from "../../../assets/images/pictures/dokotabe-banner.png";
 
-function Projects() {
+function Projects({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) {
   const [isVisible, setIsVisible] = useState({
     heading: false,
     card1: false,
@@ -41,7 +45,9 @@ function Projects() {
   return (
     <div className="projects-home-container" ref={projectsRef}>
       <h2
-        className={`projects-home-heading ${isVisible.heading ? "visible" : ""}`}
+        className={`projects-home-heading ${
+          isVisible.heading ? "visible" : ""
+        }`}
         style={{
           opacity: isVisible.heading ? 1 : 0,
           transition: "opacity 0.5s ease",
@@ -51,7 +57,9 @@ function Projects() {
         Projects
       </h2>
       <div className="projects-home-grid">
-        <div className={`project-home-card ${isVisible.card1 ? "rise-up" : ""}`}>
+        <div
+          className={`project-home-card ${isVisible.card1 ? "rise-up" : ""}`}
+        >
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
@@ -68,12 +76,7 @@ function Projects() {
                   and simulates typing on the website using Selenium.
                 </p>
                 <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/RomaruDaze/SeleniumType",
-                      "_blank"
-                    )
-                  }
+                  onClick={() => setCurrentView("projects")}
                   className="button type1"
                 >
                   More
@@ -82,7 +85,9 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className={`project-home-card ${isVisible.card2 ? "rise-up" : ""}`}>
+        <div
+          className={`project-home-card ${isVisible.card2 ? "rise-up" : ""}`}
+        >
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
@@ -96,9 +101,7 @@ function Projects() {
                   tasks, helping you stay organized and productive.
                 </p>
                 <button
-                  onClick={() =>
-                    window.open("https://github.com/RomaruDaze/TDL", "_blank")
-                  }
+                  onClick={() => setCurrentView("projects")}
                   className="button type1"
                 >
                   More
@@ -107,11 +110,13 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className={`project-home-card ${isVisible.card3 ? "rise-up" : ""}`}>
+        <div
+          className={`project-home-card ${isVisible.card3 ? "rise-up" : ""}`}
+        >
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                  <img
+                <img
                   src={DokoTabe}
                   alt="DokoTabe"
                   className="project-home-image"
@@ -126,12 +131,7 @@ function Projects() {
                   restaurants to your favorites.
                 </p>
                 <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/RomaruDaze/Hackathon-DokoTabe",
-                      "_blank"
-                    )
-                  }
+                  onClick={() => setCurrentView("projects")}
                   className="button type1"
                 >
                   More
