@@ -20,6 +20,18 @@ export function getLanguageColor(language: string) {
       return "#701516";
     case "Swift":
       return "#f05237";
+    case "Kotlin":
+      return "#a97bff";
+    case "Go":
+      return "#00add8";
+    case "Rust":
+      return "#dea584";
+    case "PHP":
+      return "#4f5d95";
+    case "Scala":
+      return "#de935f";
+    case "Objective-C":
+      return "#438eff";
     default:
       return "#ffffff";
   }

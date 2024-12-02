@@ -16,7 +16,7 @@ function Contact() {
     const handleScroll = () => {
       const middleOfScreen = window.innerHeight / 2;
       const contactPosition = document
-        .querySelector(".contact-container")
+        .querySelector(".contact-home-container")
         ?.getBoundingClientRect().top;
 
       if (contactPosition && contactPosition < middleOfScreen) {
@@ -29,10 +29,10 @@ function Contact() {
   }, []);
 
   return (
-    <div className={`contact-container ${isVisible ? "visible" : ""}`}>
+    <div className={`contact-home-container ${isVisible ? "visible" : ""}`}>
       <h2>Contact</h2>
-      <div className="contact-content">
-        <div className="contact-links">
+      <div className="contact-home-content">
+        <div className="contact-home-links">
           <a href="mailto:romarudazee99@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
@@ -67,8 +67,8 @@ function Contact() {
             <FontAwesomeIcon icon={faXTwitter} /> Twitter
           </a>
         </div>
-        <div className="contact-form">
-          <form className="contact-form-container">
+        <div className="contact-home-form">
+          <form className="contact-home-form-container">
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <textarea placeholder="Message"></textarea>

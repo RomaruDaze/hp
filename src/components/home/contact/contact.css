@@ -1,4 +1,4 @@
-.contact-container {
+.contact-home-container {
     background-color: var(--tertiary-color);
     height: 70vh;
     font-family: "Tektur", sans-serif;
@@ -9,17 +9,17 @@
     transition: opacity 0.5s ease;
 }
 
-.contact-container.visible {
+.contact-home-container.visible {
     opacity: 1;
 }
 
-.contact-container h2 {
+.contact-home-container h2 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 50px;
 }
 
-.contact-content {
+.contact-home-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +27,7 @@
     padding: 0 15%;
 }
 
-.contact-links {
+.contact-home-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,24 +38,24 @@
 
 }
 
-.contact-links a {
+.contact-home-links a {
     margin: 0 10px;
     text-decoration: none;
     color: var(--primary-color);
 }
 
-.contact-links a:hover {
+.contact-home-links a:hover {
     color: var(--secondary-color);
 }
 
-.contact-form {
+.contact-home-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.contact-form-container {
+.contact-home-form-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@
     align-items: center;
 }
 
-.contact-form-container input,
+.contact-home-form-container input,
 textarea {
     width: 120%;
     margin-bottom: 10px;
@@ -71,23 +71,23 @@ textarea {
     outline: none;
 }
 
-.contact-form-container textarea {
+.contact-home-form-container textarea {
     height: 120px;
 }
 
-.contact-form-container input:focus,
-.contact-form-container textarea:focus {
+.contact-home-form-container input:focus,
+.contact-home-form-container textarea:focus {
     border: 2px solid var(--secondary-color);
 }
 
-.contact-form button {
+.contact-home-form button {
     width: 120%;
     padding: 10px;
     margin-top: 20px;
     background-color: var(--tertiary-color);
 }
 
-.contact-form button:hover {
+.contact-home-form button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }

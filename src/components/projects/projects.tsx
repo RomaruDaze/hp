@@ -63,6 +63,16 @@ function Projects() {
   const [tdlLanguages, setTDLLanguages] = useState<Language[]>([]);
   const [dokoTabeLanguages, setDokoTabeLanguages] = useState<Language[]>([]);
   const [apreaderLanguages, setAPReaderLanguages] = useState<Language[]>([]);
+
+  // State for visibility
+  const [isVisible, setIsVisible] = useState({
+    title: false,
+    card1: false,
+    card2: false,
+    card3: false,
+    card4: false,
+  });
+
   const fetchLanguages = async (
     repo: string,
     setLanguages: React.Dispatch<React.SetStateAction<any[]>>
@@ -93,13 +103,28 @@ function Projects() {
     fetchLanguages("APReader", setAPReaderLanguages);
   }, []);
 
+  useEffect(() => {
+    // Trigger visibility in order
+    setIsVisible((prev) => ({ ...prev, title: true }));
+    setTimeout(() => setIsVisible((prev) => ({ ...prev, card1: true })), 300);
+    setTimeout(() => setIsVisible((prev) => ({ ...prev, card2: true })), 600);
+    setTimeout(() => setIsVisible((prev) => ({ ...prev, card3: true })), 900);
+    setTimeout(() => setIsVisible((prev) => ({ ...prev, card4: true })), 1200);
+  }, []);
+
   return (
     <div className="projects-container">
       <div className="projects-content">
-        <h1>My Projects</h1>
+        <h1 className={`projects-title ${isVisible.title ? "rise-up" : ""}`}>
+          My Projects
+        </h1>
         <div className="projects-list">
           <div className="projects-row">
-            <div className="flip-project-card">
+            <div
+              className={`flip-project-card ${
+                isVisible.card1 ? "rise-up" : ""
+              }`}
+            >
               <div className="flip-project-card-inner">
                 <div className="flip-project-card-front">
                   <div className="backshape"></div>
@@ -132,7 +157,11 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="flip-project-card">
+            <div
+              className={`flip-project-card ${
+                isVisible.card2 ? "rise-up" : ""
+              }`}
+            >
               <div className="flip-project-card-inner">
                 <div className="flip-project-card-front">
                   <div className="backshape"></div>
@@ -163,7 +192,11 @@ function Projects() {
             </div>
           </div>
           <div className="projects-row">
-            <div className="flip-project-card">
+            <div
+              className={`flip-project-card ${
+                isVisible.card3 ? "rise-up" : ""
+              }`}
+            >
               <div className="flip-project-card-inner">
                 <div className="flip-project-card-front">
                   <div className="backshape"></div>
@@ -183,7 +216,6 @@ function Projects() {
                       category, and to add restaurants to your favorites.
                     </p>
                     <LanguageBar languages={dokoTabeLanguages} />{" "}
-                    {/* Use fetched languages */}
                     <button
                       onClick={() => {
                         window.open(
@@ -198,7 +230,11 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="flip-project-card">
+            <div
+              className={`flip-project-card ${
+                isVisible.card4 ? "rise-up" : ""
+              }`}
+            >
               <div className="flip-project-card-inner">
                 <div className="flip-project-card-front">
                   <div className="backshape"></div>
@@ -219,7 +255,6 @@ function Projects() {
                       CSV file.
                     </p>
                     <LanguageBar languages={apreaderLanguages} />{" "}
-                    {/* Use fetched languages */}
                     <button
                       onClick={() => {
                         window.open(
