@@ -39,9 +39,9 @@ function Projects() {
   }, []);
 
   return (
-    <div className="projects-container" ref={projectsRef}>
+    <div className="projects-home-container" ref={projectsRef}>
       <h2
-        className={`projects-heading ${isVisible.heading ? "visible" : ""}`}
+        className={`projects-home-heading ${isVisible.heading ? "visible" : ""}`}
         style={{
           opacity: isVisible.heading ? 1 : 0,
           transition: "opacity 0.5s ease",
@@ -50,15 +50,15 @@ function Projects() {
       >
         Projects
       </h2>
-      <div className="projects-grid">
-        <div className={`project-card ${isVisible.card1 ? "rise-up" : ""}`}>
+      <div className="projects-home-grid">
+        <div className={`project-home-card ${isVisible.card1 ? "rise-up" : ""}`}>
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <img
                   src={SeleniumType}
                   alt="SeleniumType"
-                  className="project-image"
+                  className="project-home-image"
                 />
               </div>
               <div className="flip-card-back">
@@ -82,11 +82,11 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className={`project-card ${isVisible.card2 ? "rise-up" : ""}`}>
+        <div className={`project-home-card ${isVisible.card2 ? "rise-up" : ""}`}>
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <img src={TDL} alt="TDL" className="project-image" />
+                <img src={TDL} alt="TDL" className="project-home-image" />
               </div>
               <div className="flip-card-back">
                 <h3 className="title">TDL</h3>
@@ -107,11 +107,15 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className={`project-card ${isVisible.card3 ? "rise-up" : ""}`}>
+        <div className={`project-home-card ${isVisible.card3 ? "rise-up" : ""}`}>
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
-                <img src={DokoTabe} alt="DokoTabe" className="project-image" />
+                  <img
+                  src={DokoTabe}
+                  alt="DokoTabe"
+                  className="project-home-image"
+                />
               </div>
               <div className="flip-card-back">
                 <h3 className="title">DokoTabe</h3>

@@ -4,6 +4,7 @@ import "./assets/fonts/font-roboto.css";
 import Header from "./components/header/header";
 import Body from "./components/home/body";
 import Resume from "./components/resume/resume";
+import Projects from "./components/projects/projects";
 import Footer from "./components/footer/footer";
 
 function App() {
@@ -52,8 +53,10 @@ function App() {
       <div className="app-body-container" id="body">
         {currentView === "body" ? (
           <Body setCurrentView={handleSetCurrentView} />
-        ) : (
+        ) : currentView === "resume" ? (
           <Resume />
+        ) : (
+          <Projects />
         )}
       </div>
       <div className="app-footer-container" id="footer">
