@@ -103,11 +103,18 @@
 
     .timeline-content {
         padding-left: 30px;
-        border-left: 5px solid var(--secondary-color);
     }
 
     .timeline-content h3 {
         margin: 0;
         font-size: 1rem;
     }
+    .timeline-content h3 {
+        margin: 0;
+        font-size: 1rem;
+    }
+    .timeline-content h3 a {
+        padding: 3px 5px;
+    }
+
 }
