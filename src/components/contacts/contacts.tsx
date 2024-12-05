@@ -13,25 +13,29 @@ function Contacts() {
       .value;
 
     const templateParams = {
-      from_name: name,
-      from_email: email,
+      name: name,
+      email: email,
       message: message,
     };
 
     emailjs
       .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_EMAILJS_USER_ID!
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
-      .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
+      .then(() => {
+        alert("Email sent successfully!");
       })
-      .catch((error) => {
-        console.error("Failed to send email:", error);
+      .catch(() => {
+        alert("Failed to send email!");
       });
   };
+
+  console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+  console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+  console.log("User ID:", import.meta.env.VITE_EMAILJS_USER_ID);
 
   return (
     <div className="contacts-container">

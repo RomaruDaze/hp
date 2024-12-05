@@ -8,7 +8,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
-
+import emailjs from "emailjs-com";
 function Contact() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -27,6 +27,34 @@ function Contact() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const name = (document.getElementById("name") as HTMLInputElement).value;
+    const email = (document.getElementById("mail") as HTMLInputElement).value;
+    const message = (document.getElementById("message") as HTMLTextAreaElement)
+      .value;
+
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      )
+      .then(() => {
+        alert("Email sent successfully!");
+      })
+      .catch(() => {
+        alert("Failed to send email!");
+      });
+  };
 
   return (
     <div className={`contact-home-container ${isVisible ? "visible" : ""}`}>
@@ -73,7 +101,9 @@ function Contact() {
             <input type="email" placeholder="Email" />
             <textarea placeholder="Message"></textarea>
           </form>
-          <button type="submit">Submit</button>
+          <button type="submit" onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
       </div>
     </div>
