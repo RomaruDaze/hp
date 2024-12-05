@@ -111,6 +111,8 @@
     overflow: hidden;
     color: var(--primary-color);
     transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn-txt {
@@ -135,7 +137,6 @@
 
 .button:hover {
     color: var(--secondary-color);
-    border: none;
 }
 
 .type1:hover::after {

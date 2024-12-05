@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./assets/fonts/font-roboto.css";
 import Header from "./components/header/header";
@@ -9,23 +10,15 @@ import Contacts from "./components/contacts/contacts";
 import Footer from "./components/footer/footer";
 
 function App() {
-  const [headerBgColor, setHeaderBgColor] = useState("#000");
-  const [currentView, setCurrentView] = useState(() => {
-    return localStorage.getItem("currentView") || "body";
-  });
-
-  const handleSetCurrentView = (view: string) => {
-    setCurrentView(view);
-    window.scrollTo(0, 0);
-  };
+  const [headerOpacity, setHeaderOpacity] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (scrollY > 30) {
-        setHeaderBgColor("rgba(0, 0, 0, 0.75)");
+        setHeaderOpacity(0.75);
       } else {
-        setHeaderBgColor("rgba(0, 0, 0, 1)");
+        setHeaderOpacity(1);
       }
     };
 
@@ -35,37 +28,17 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("currentView", currentView);
-  }, [currentView]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <>
-      <div
-        className="app-header-container"
-        style={{ backgroundColor: headerBgColor }}
-      >
-        <Header setCurrentView={handleSetCurrentView} />
-      </div>
-      <div className="app-body-container" id="body">
-        {currentView === "body" ? (
-          <Body setCurrentView={handleSetCurrentView} />
-        ) : currentView === "resume" ? (
-          <Resume />
-        ) : currentView === "projects" ? (
-          <Projects />
-        ) : (
-          <Contacts />
-        )}
-      </div>
-      <div className="app-footer-container" id="footer">
-        <Footer />
-      </div>
-    </>
+    <Router>
+      <Header opacity={headerOpacity} />
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

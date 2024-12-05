@@ -3,8 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "emailjs-com";
+import { useEffect } from "react";
 
 function Contacts() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     const name = (document.getElementById("name") as HTMLInputElement).value;

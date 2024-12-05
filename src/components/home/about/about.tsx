@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import "./about.css";
 import profilePicture from "../../../assets/images/pictures/profile-picture.png";
+import { Link } from "react-router-dom";
 
-function About({ setCurrentView }: { setCurrentView: (view: string) => void }) {
+function About() {
   const [isVisible, setIsVisible] = useState({
     picture: false,
     content: false,
@@ -68,9 +69,9 @@ function About({ setCurrentView }: { setCurrentView: (view: string) => void }) {
           </span>{" "}
           a better country.
         </p>
-        <button className="ui-btn" onClick={() => setCurrentView("resume")}>
-          <span>My Resume</span>
-        </button>
+        <Link to="/resume" className="ui-btn">
+          <span>Resume</span>
+        </Link>
       </div>
     </div>
   );

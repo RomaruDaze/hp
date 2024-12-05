@@ -3,12 +3,9 @@ import "./projects.css";
 import TDL from "../../../assets/images/pictures/tdl-banner.png";
 import SeleniumType from "../../../assets/images/pictures/seltype-banner.png";
 import DokoTabe from "../../../assets/images/pictures/dokotabe-banner.png";
+import { Link } from "react-router-dom";
 
-function Projects({
-  setCurrentView,
-}: {
-  setCurrentView: (view: string) => void;
-}) {
+function Projects() {
   const [isVisible, setIsVisible] = useState({
     heading: false,
     card1: false,
@@ -75,12 +72,9 @@ function Projects({
                   This project automates the process of logging into Monkeytype
                   and simulates typing on the website using Selenium.
                 </p>
-                <button
-                  onClick={() => setCurrentView("projects")}
-                  className="button type1"
-                >
+                <Link to="/projects" className="button type1">
                   More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -100,12 +94,9 @@ function Projects({
                   Flutter. This app allows users to efficiently manage their
                   tasks, helping you stay organized and productive.
                 </p>
-                <button
-                  onClick={() => setCurrentView("projects")}
-                  className="button type1"
-                >
+                <Link to="/projects" className="button type1">
                   More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -130,12 +121,9 @@ function Projects({
                   narrow down your search by distance and category, and to add
                   restaurants to your favorites.
                 </p>
-                <button
-                  onClick={() => setCurrentView("projects")}
-                  className="button type1"
-                >
+                <Link to="/projects" className="button type1">
                   More
-                </button>
+                </Link>
               </div>
             </div>
           </div>

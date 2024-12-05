@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
+
+
 function Contact() {
   const [isVisible, setIsVisible] = useState(false);
 

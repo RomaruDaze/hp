@@ -79,6 +79,8 @@
     transition: var(--btn-transition);
     overflow: hidden;
     box-shadow: var(--btn-shadow);
+    text-decoration: none;
+    width: 20%;
 }
 
 .ui-btn span {
@@ -87,6 +89,7 @@
     box-sizing: border-box;
     position: relative;
     background: inherit;
+
 }
 
 .ui-btn span::before {

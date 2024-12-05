@@ -12,6 +12,10 @@ import { useEffect, useRef } from "react";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 function Resume() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

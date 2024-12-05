@@ -40,7 +40,7 @@
     padding: 0 20px;
 }
 
-.content-container button {
+.content-container a {
     background-color: var(--secondary-color);
     background-size: 200% 100%;
     transition: color 0.3s ease;
@@ -51,9 +51,11 @@
     font-size: 1.5rem;
     align-self: center;
     transition: all 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
 }
 
-.content-container button:hover {
+.content-container a:hover {
     color: var(--secondary-color);
     background-color: var(--primary-color);
     animation: slide 0.5s forwards;

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [buttonOpacity, setButtonOpacity] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setButtonOpacity(1); // Set button opacity to 1 after the paragraph appears
-    }, 2000); // Adjust this timing based on your paragraph's appearance duration
+      setButtonOpacity(1);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -34,11 +35,12 @@ function Home() {
           Embrace the power of coding, unleash your creativity, and conquer
           challenges with innovative solutions!
         </p>
-        <button
+        <Link
+          to="/contacts"
           style={{ opacity: buttonOpacity, transition: "opacity 1s ease" }}
         >
-          Contact me
-        </button>
+          Contacts
+        </Link>
       </div>
     </div>
   );

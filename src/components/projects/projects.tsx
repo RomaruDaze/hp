@@ -6,9 +6,10 @@ import SeleniumType from "../../assets/images/pictures/seltype-banner.png";
 import TDL from "../../assets/images/pictures/tdl-banner.png";
 import DokoTabe from "../../assets/images/pictures/dokotabe-banner.png";
 import APReader from "../../assets/images/pictures/apreader-banner.png";
+import LanguageBar from "./LanguageBar";
 
 interface LanguageData {
-  [key: string]: number; 
+  [key: string]: number;
 }
 
 interface Language {
@@ -17,48 +18,11 @@ interface Language {
   color: string;
 }
 
-function LanguageBar({
-  languages,
-}: {
-  languages: { name: string; percentage: number; color: string }[];
-}) {
-  const totalPercentage = languages.reduce(
-    (total, lang) => total + lang.percentage,
-    0
-  );
-
-  return (
-    <div className="language-bar">
-      <div className="language-bar-total" style={{ width: "100%" }}>
-        {languages.map((lang) => (
-          <div
-            key={lang.name}
-            className="language-bar-item"
-            style={{
-              width: `${(lang.percentage / totalPercentage) * 100}%`,
-              backgroundColor: lang.color,
-            }}
-          />
-        ))}
-      </div>
-      <div className="language-bar-labels">
-        {languages.map((lang) => (
-          <div key={lang.name} className="language-bar-label">
-            <div
-              className="color-circle"
-              style={{ backgroundColor: lang.color }}
-            />
-            <span>
-              {lang.name} - {lang.percentage.toFixed(1)}%
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function Projects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [seleniumLanguages, setSeleniumLanguages] = useState<Language[]>([]);
   const [tdlLanguages, setTDLLanguages] = useState<Language[]>([]);
   const [dokoTabeLanguages, setDokoTabeLanguages] = useState<Language[]>([]);

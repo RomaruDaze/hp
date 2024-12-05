@@ -2,13 +2,18 @@ import Home from "./home/home";
 import About from "./about/about";
 import Projects from "./projects/projects";
 import Contact from "./contact/contact";
+import { useEffect } from "react";
 
-function Body({ setCurrentView }: { setCurrentView: (view: string) => void }) {
+function Body() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Home />
-      <About setCurrentView={setCurrentView} />
-      <Projects setCurrentView={setCurrentView} />
+      <About />
+      <Projects />
       <Contact />
     </>
   );
