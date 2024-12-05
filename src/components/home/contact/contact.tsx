@@ -97,9 +97,9 @@ function Contact() {
         </div>
         <div className="contact-home-form">
           <form className="contact-home-form-container">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message"></textarea>
+            <input type="text" placeholder="Name" id="name" />
+            <input type="email" placeholder="Email" id="mail" />
+            <textarea placeholder="Message" id="message"></textarea>
           </form>
           <button type="submit" onClick={handleSubmit}>
             Submit
