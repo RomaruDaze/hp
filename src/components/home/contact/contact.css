@@ -91,3 +91,26 @@ textarea {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+@media (max-width: 450px) {
+    .contact-home-links {
+        display: none;
+    }
+
+    .contact-home-form-container {
+        width: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-home-form-container input,
+    textarea {
+        width: 120%;
+    }
+
+    .contact-home-form button {
+        width: 145%;
+    }
+}

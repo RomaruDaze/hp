@@ -158,3 +158,13 @@
     animation-delay: 0.2s;
     /* Adjust delay for staggered effect */
 }
+
+@media (max-width: 450px) {
+    .contact-content {
+        padding: 0% 0%;
+    }
+
+    .contact-links {
+        display: none;
+    }
+}

@@ -33,3 +33,22 @@
 .footer-social-media a:hover {
     color: var(--secondary-color);
 }
+
+@media (max-width: 450px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .footer-container p {
+        font-size: 8pt;
+        padding-top: 16px;
+        padding-right: 20px;
+    }
+
+    .footer-social-media {
+        padding: 10px 30px;
+    }
+}

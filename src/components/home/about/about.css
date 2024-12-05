@@ -208,3 +208,48 @@
         right: 0;
     }
 }
+
+
+@media (max-width: 450px) {
+    .about-container {
+        flex-direction: column;
+        height: 100vh;
+        padding: 0 10%;
+    }
+
+    .about-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-picture img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-content h1 {
+        font-size: 3rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+    }
+
+    .about-content p span {
+        font-weight: bold;
+    }
+
+    .about-content p span a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .ui-btn {
+        width: 40%;
+    }
+}

@@ -229,3 +229,21 @@
     transform: translateY(-20px);
     opacity: 0;
 }
+
+
+@media (max-width: 450px) {
+    .projects-row {
+        flex-direction: column;
+    }
+
+    .flip-project-card {
+        width: 350px;
+        height: 600px;
+    }
+
+
+    .project-card {
+        width: 350px;
+        height: 600px;
+    }
+}
