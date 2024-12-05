@@ -7,14 +7,14 @@
     <script>
         // Redirect to index.html while preserving the URL
         const path = window.location.pathname;
-        console.log(path)
         if (path !== '/') {
-            window.location.replace('/'); 
+            setTimeout(() => {
+                window.location.replace('/'); 
+            }, 3000);
         }
     </script>
 </head>
 <body>
-    <h1>404 - Page Not Found</h1>
     <p>Redirecting...</p>
 </body>
 </html>
