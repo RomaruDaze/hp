@@ -107,6 +107,7 @@
     font-weight: bold;
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .form-container .form .button-container .send-button:hover {
@@ -129,6 +130,7 @@
     background: var(--primary-color);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .form-container .form .button-container .reset-button-container .reset-button:hover {

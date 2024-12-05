@@ -2,8 +2,37 @@ import "./contacts.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import emailjs from "emailjs-com";
 
 function Contacts() {
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const name = (document.getElementById("name") as HTMLInputElement).value;
+    const email = (document.getElementById("mail") as HTMLInputElement).value;
+    const message = (document.getElementById("message") as HTMLTextAreaElement)
+      .value;
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_USER_ID!
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+      });
+  };
+
   return (
     <div className="contacts-container">
       <h2 className="rise">Contact</h2>
@@ -11,12 +40,18 @@ function Contacts() {
         <div className="form-container rise">
           <div className="form">
             <span className="heading">Text Me</span>
-            <input placeholder="Name" type="text" className="input rise" />
+            <input
+              placeholder="Name"
+              type="text"
+              className="input rise"
+              id="name"
+            />
             <input
               placeholder="Email"
               id="mail"
               type="email"
               className="input"
+              required
             />
             <textarea
               placeholder="Say Hello"
@@ -27,7 +62,9 @@ function Contacts() {
               className="textarea"
             ></textarea>
             <div className="button-container">
-              <div className="send-button ">Send</div>
+              <div className="send-button" onClick={handleSubmit}>
+                Send
+              </div>
               <div className="reset-button-container">
                 <div id="reset-btn" className="reset-button ">
                   Reset
