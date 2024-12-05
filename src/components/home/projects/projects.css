@@ -149,4 +149,8 @@
     .projects-home-container {
         height: 130vh;
     }
+    .flip-card {
+        height: 290px;
+        width: 390px;
+    }
 }
