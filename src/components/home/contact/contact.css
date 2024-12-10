@@ -94,7 +94,7 @@ textarea {
 
 @media (max-width: 450px) {
     .contact-home-container {
-        height: 100vh;
+        height: 80vh;
     }
 
     .contact-home-links {
