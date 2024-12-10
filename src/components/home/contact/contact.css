@@ -93,6 +93,10 @@ textarea {
 }
 
 @media (max-width: 450px) {
+    .contact-home-container {
+        height: 100vh;
+    }
+
     .contact-home-links {
         display: none;
     }
