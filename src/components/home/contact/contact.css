@@ -1,6 +1,6 @@
 .contact-home-container {
     background-color: var(--tertiary-color);
-    height: 90vh;
+    height: 80vh;
     font-family: "Tektur", sans-serif;
     display: flex;
     flex-direction: column;

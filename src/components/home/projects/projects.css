@@ -144,11 +144,11 @@
     transform: scale(100) translateX(2px);
 }
 
-
 @media (max-width: 450px) {
     .projects-home-container {
         height: 130vh;
     }
+
     .flip-card {
         height: 290px;
         width: 350px;
