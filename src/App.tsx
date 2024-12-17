@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./assets/fonts/font-roboto.css";
 import Header from "./components/header/header";
 import Body from "./components/home/body";
